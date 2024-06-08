@@ -19,8 +19,19 @@
     --green-tint: rgba(100, 255, 218, .1);
     --pink: #f57dff;
     --blue: #57cbff;
-    --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
-    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+    --primary-color: #0e1525;
+    --secondary-color: #0e1525;
+    --bg-dark-blue: #091020;
+    --bg-white: #fff;
+    --gray-color: #c6c9d8bf;
+    --gradient-color: linear-gradient(-224deg, var(--primary-color) 0, #337DFF 100%);
+    --gradient-text: linear-gradient(120deg, #1C99FE 20.69%, #7644FF 50.19%, var(--primary-color) 79.69%);
+    --primary-font: 'Poppins', sans-serif;
+    --primary-text: rgb(19, 41, 65);
+    --text-gray: white;
+    --text-white: #fff;
+    list-style: none;
+
 }
 
 .container {
@@ -34,7 +45,9 @@
 
 .container .navbar {
     width: 100%;
-    padding: 20px 20px;
+    padding: 0px 20px;
+    height: 10vh;
+    align-items: center;
     display: flex;
     justify-content: space-between;
     font-family: "Roboto Slab", serif;
@@ -50,24 +63,34 @@
 
 .container .navbar ul li {
     color: var(--lightest-slate);
-    border-bottom:2px solid gold ;
+    border-bottom: 2px solid gold;
 }
 
-.container .navbar ul li:hover{
+.container .navbar ul li:hover {
     color: gold;
     transition: 0.5s ease-in-out;
 }
 
+.container .navbar .p {
+width: 4%;
+height: 8vh;
+/* background: wheat; */
+display: flex;
+justify-content: center;
+align-items: center;
+border-radius: 50%;
+border:  1px solid var(--lightest-slate);
+}
 
-.container .navbar .p p{
-  color: var(--lightest-slate);
+.container .navbar .p p {
+    color: var(--lightest-slate);
 }
 
 .cont {
     width: 100%;
     height: 100vh;
     position: absolute;
-    background-image:url('Images/img1.webp') ;
+    background-image: url('Images/img1.webp');
     background-size: cover;
     background-repeat: repeat;
     display: flex;
@@ -89,15 +112,6 @@
     font-size: 40px;
     font-weight: 400;
     font-family: "Roboto Slab", serif;
-}
-
-#mouse {
-    width: 20px;
-    height: 20px;
-    background: white;
-    position: fixed;
-    border-radius: 50%;
-
 }
 
 .container .content {
@@ -127,14 +141,14 @@
 }
 
 .text #h2 {
-    color:gold ;
+    color: gold;
     font-size: 50px;
     font-weight: 500;
     font-family: "Roboto Slab", serif;
 }
 
 .text #h3 {
-    color:var(--lightest-slate) ;
+    color: var(--lightest-slate);
     font-family: "Roboto Slab", serif;
 }
 
@@ -149,7 +163,7 @@
     background: transparent;
 }
 
-.text button:hover{
+.text button:hover {
     color: #000;
     font-weight: bold;
     background: var(--lightest-slate);
@@ -164,8 +178,8 @@
 }
 
 .container .content .img img {
-    width: 70%;
-    height: 70vh;
+    width: 65%;
+    height: 65vh;
     border-radius: 50%;
 }
 
@@ -173,12 +187,350 @@
 .second {
     width: 100%;
     height: 100vh;
+    background-image: url(Images/bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    padding: 0px 10px;
+}
+
+.second .h1 {
+    width: 100%;
+    height: 50vh;
+}
+
+.second h1 {
+    font-family: "Roboto Slab", serif;
+    font-size: 20vw;
+    background: -webkit-linear-gradient(#d31212, #f7f5f5);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 5px 5px 5px var(--bg-white);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to right bottom, #232023, #211d21, #1f1b1f, #1c181e, #1a161c);
+}
+
+.subtitle {
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 30px;
+    font-size: 40px;
+    margin-bottom: 12px;
+    color: gold;
+    font-family: "Roboto Slab", serif;
+    text-decoration: underline;
+}
+
+.about .myimg {
+    width: 45%;
+    height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.about .myimg img {
+    width: 100%;
+    height: 100vh;
+}
+
+.about .myimg .p {
+    color: var(--lightest-slate);
+    font-family: "Roboto Slab", serif;
+    font-weight: 400;
+}
+
+.val {
+    width: 90%;
+    height: 12vh;
+    /* background: white; */
+}
+
+.val p {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-color);
+    font-family: "Roboto Slab", serif;
+    font-size: 17px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+
+}
+
+.val span {
+    color: white;
+}
+
+.percent {
+    width: 100%;
+    height: 1vh;
+    background: gray;
+    border-radius: 5px;
+}
+
+.percent #p1 {
+    width: 80%;
+    height: 1vh;
+    background-image: linear-gradient(to right bottom, #000000, #3f3243, #586c95, #2fb4df, #00ffff);
+}
+
+.percent #p2 {
+    width: 75%;
+    height: 1vh;
+    background-image: linear-gradient(to right bottom, #000000, #3f3243, #586c95, #2fb4df, #00ffff);
+}
+
+.percent #p3 {
+    width: 70%;
+    height: 1vh;
+    background-image: linear-gradient(to right bottom, #000000, #3f3243, #586c95, #2fb4df, #00ffff);
+}
+
+.percent #p4 {
+    width: 65%;
+    height: 1vh;
+    background-image: linear-gradient(to right bottom, #000000, #3f3243, #586c95, #2fb4df, #00ffff);
+}
+
+.about .myimg .skills {
+    width: 90%;
+    height: 8vh;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.about .myimg .skills button {
+    padding: 12px 20px;
+    border-radius: 50px;
+    background-color: var(--lightest-navy);
+    color: var(--white);
+    border: none;
+    font-size: 16px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.about .myimg .skills #btn2,
+#btn3 {
+    background: transparent;
+}
+
+.about .myimg .main {
+    width: 100%;
+    height: 50vh;
+}
+
+#Experiance p {
+    font-size: 16px;
+    color: var(--bg-white);
+    font-family: "Roboto Slab", serif;
+    text-decoration: underline;
+}
+
+#Experiance h4 {
+    color: var(--bg-white);
+    font-family: "Roboto Slab", serif;
+    color: rgb(167, 167, 167);
+    font-weight: 300;
+
+}
+
+#Education li {
+    padding: 10px 0px;
+    font-size: 16px;
+    color: var(--bg-white);
+    font-family: "Roboto Slab", serif;
+    text-decoration: underline;
+}
+
+#Education h3 {
+    color: rgb(167, 167, 167);
+    font-weight: 300;
+    font-family: "Roboto Slab", serif;
+}
+
+.third {
+    width: 100%;
+    height: 140vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-image: linear-gradient(to right bottom, #232023, #211d21, #1f1b1f, #1c181e, #1a161c);
+    align-items: center;
+
+}
+
+.third p {
+    width: 70%;
+    font-size: 16px;
+    text-align: center;
+    color: var(--lightest-slate);
+    font-family: "Roboto Slab", serif;
+}
+
+.third #head {
+    color: gold;
+    text-decoration: underline;
+    font-family: "Roboto Slab", serif;
+}
+
+.third .subtitle {
+    display: inline-block;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 18px;
+    font-size: 16px;
+    margin-bottom: 12px;
+    background: var(--primary-color);
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.third .imgs {
+    width: 100%;
+    height: 40vh;
+    display: flex;
+    overflow-x: hidden;
+    justify-content: space-evenly;
+}
+
+.third .imgs .images {
+    width: 20%;
+    height: 40vh;
+    background: white;
+    overflow-y: hidden;
+    border-radius: 5px;
+}
+
+.third .imgs #img1 {
+    background-image: url(Images/images1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third .imgs #img2 {
+    background-image: url(Images/quiz.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third .imgs #img3 {
+    background-image: url(Images/todo.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third .imgs #img4 {
+    background-image: url(Images/sneakers.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third .imgs #img5 {
+    background-image: url(Images/pizza.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third .imgs #img6 {
+    background-image: url(Images/travels.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third .imgs #img7 {
+    background-image: url(Images/login.avif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third .imgs #img8 {
+    background-image: url(Images/cash.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.third .imgs .images .value {
+    width: 100%;
+    height: 40vh;
+    background: var(--light-navy);
+    margin-top: 70%;
+    transition: all 1s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.third .imgs .images .value h1 {
+    color: gold;
+    font-family: "Roboto Slab", serif;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.third .imgs .images .value h2 {
+    color:var(--lightest-slate);
+    font-family: "Roboto Slab", serif;
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.third .imgs .images .value .button {
+    height: 8vh;
+    width: 100%;
+    background: #000;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.third .value .button button {
+    padding: 5px 20px;
+    background-color: var(--lightest-navy);
+    color: var(--lightest-slate);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.third .value .button button:hover {
+    background-color: white;
+    color: #000;
+    transition: all 1s ease-in-out;
+}
+
+.contact{
+    height: 100vh;
+    width: 100%;
     background-image: linear-gradient(to right bottom, #232023, #211d21, #1f1b1f, #1c181e, #1a161c);
 
 }
 
-.second .imgs{
-    width: 30%;
-    height: 50vh;
-    background-color: #112240;
-}
