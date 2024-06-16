@@ -159,13 +159,10 @@ document.getElementById('downloadBtn').addEventListener('click', function() {
   });
   
 
-  const mobileMenu = document.getElementById('mobile-menu');
-const navList = document.querySelector('.nav-list');
 
-mobileMenu.addEventListener('click', () => {
-  mobileMenu.classList.toggle('is-active');
-  navList.classList.toggle('active');
-});
+
+
+
 
 
 
