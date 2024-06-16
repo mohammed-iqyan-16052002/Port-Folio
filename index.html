@@ -23,24 +23,33 @@
       <h1 id="h1">Front End Developer</h1>
     </div>
     <div class="navbar">
+
       <div class="p">
-        <p>MI</p>
+        <img src="Images/logo-re.png" alt="">
       </div>
-      <ul>
-
-        <li>Home</li>
-        <li>About</li>
-        <li>Project</li>
-        <li>Contact Us</li>
-      </ul>
-
+    
+        <div class="menu-toggle" id="mobile-menu">
+          <div class="bar"></div>
+          <div class="bar"></div>
+          <div class="bar"></div>
+        </div>
+        <ul class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      
     </div>
     <div class="content">
       <div class="text">
-        <h1 id="h1">Hi , My name is</h1>
+        <h1 id="h1">Hi , I am</h1>
         <h1 id="h2">Mohammed Iqyan</h1>
         <h1 id="h3">Web Developer</h1>
-        <button>Hire Me</button>
+        <div class="b">
+          <button>Hire Me</button>
+          <button id="downloadBtn">Download CV</button>
+        </div>
       </div>
       <div class="img">
         <img src="Images/myimg.jpg" alt="">
@@ -54,7 +63,7 @@
     </div>
     <div class="myimg">
       <span class="subtitle">About Me </span>
-      <p class="p"> Meet Mohammed Iqyan T. A Bachelor of Computer Application Graduate with a Passion for Web
+      <p class="para"> Meet Mohammed Iqyan T. A Bachelor of Computer Application Graduate with a Passion for Web
         Development. Skilled in creating interactive web applications using HTML, CSS, and JavaScript frameworks like
         Bootstrap. With a track record of projects with web development.</p>
       <div class="skills">
@@ -113,12 +122,6 @@
     </div>
   </div>
 
-  <div class="second">
-    <div class="h1">
-
-      <h1>I'am.Web.Developer </h1>
-    </div>
-  </div>
 
   <div class="third">
     <span class="subtitle">🚀 Web Developer projects 🚀</span>
@@ -137,6 +140,7 @@
           <h1>QR Code Generator</h1>
           <h2>Using javascript</h2>
           <div class="button">
+            
             <a href="https://iqyan-qrcode.netlify.app/">
               <button>View</button>
             </a>
@@ -252,8 +256,59 @@
   </div>
 
   <div class="contact">
+    <h1>Contact Me</h1>
+    <div class="con">
 
+      <div class="social">
+        <div class="link">
+          <a href="">
+            <i class="fa-solid fa-share-nodes"></i>
+          </a>
+          <p>Social Profile</p>
+          <div class="icon">
+            <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/mohammed-iqyan-1ab984291">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://www.facebook.com/"><i class="fa-brands fa-square-facebook"></i></a>
+          </div>
+        </div>
+        <div class="links">
+          <div class="box">
+            <a href="">
+              <i class="fa-regular fa-envelope"></i>
+            </a>
+            <p>Email Me</p>
+            <h4>iqyanmohammed@gmail.com</h4>
+          </div>
+          <div class="box">
+            <a href="">
+              <i class="fa-solid fa-phone-volume"></i>
+            </a>
+            <p>Call Me</p>
+            <h4>+91 9629545931</h4>
+          </div>
+
+        </div>
+
+      </div>
+      <div class="social" id="form">
+        <form action="#" method="post">
+
+          <input type="text" id="name" name="name" placeholder="Your Name">
+          <input type="email" id="email" name="email" placeholder="Enter Your Email" required>
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+          <textarea id="message" name="message" rows="7" required placeholder="Message"></textarea>
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
   </div>
+   <footer>
+   
+
+   </footer>
+
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"

@@ -3,7 +3,7 @@ let tl = gsap.timeline()
 tl.to('.cont', {
     y: -500,
     opacity: 0,
-    duration: 3,
+    duration: 2,
     delay: 1,
     scrub: 2,
     pin: true
@@ -21,23 +21,25 @@ tl.from('.navbar li', {
 
 })
 
-tl.from('.img img', {
+gsap.from('.img img', {
     x: 100,
     opacity: 0,
+    delay: 4,
+    duration: 1
 })
 
 gsap.from('.text h1', {
     x: -200,
     opacity: 0,
-    duration: 2,
-    delay: 5
+    delay: 4,
+    duration: 1
 })
 
 gsap.from('.text button', {
     x: -200,
     opacity: 0,
-    duration: 2,
-    delay: 5
+    duration: 1,
+    delay: 4
 })
 
 gsap.to('.cont h1', {
@@ -63,19 +65,6 @@ gsap.from('.imgs ', {
     pin: true
 })
 
-gsap.from('.second h1', {
-    transform: 'translate(-150%)',
-    scrollTrigger: {
-        trigger: '.second ',
-        scroller: 'body',
-        start: 'top 0%',
-        end: 'top -100% ',
-        scrub: 3,
-    },
-    delay: 2,
-    duration: 3
-})
-
 
 gsap.from('.percent p', {
     x:-300,
@@ -90,7 +79,6 @@ gsap.from('.percent p', {
     }
 
 })
-
 
 
 let images = document.querySelectorAll('.images');
@@ -157,6 +145,28 @@ btn3.addEventListener('click', () => {
     }, 500)
 
 })
+
+document.getElementById('downloadBtn').addEventListener('click', function() {
+    const fileContent = 'This is the content of the file that you want to download.';
+    const blob = new Blob([fileContent], { type: 'text/plain' });
+    const link = document.createElement('a');
+    link.href = URL.createObjectURL(blob);
+    link.download = 'c:\Users\lenovo\Downloads\Resume_Mohammed Iqyan.pdf'; 
+    link.style.display = 'none';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+  
+
+  const mobileMenu = document.getElementById('mobile-menu');
+const navList = document.querySelector('.nav-list');
+
+mobileMenu.addEventListener('click', () => {
+  mobileMenu.classList.toggle('is-active');
+  navList.classList.toggle('active');
+});
+
 
 
 
