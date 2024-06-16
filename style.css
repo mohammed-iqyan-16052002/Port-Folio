@@ -1226,6 +1226,7 @@ footer {
         height: 40vh;
     }
 
+
     #Education li {
         padding: 10px 0px;
         font-size: 13px;
@@ -1237,10 +1238,13 @@ footer {
         width: 90%;
         height: 62vh;
     }
+    .third .imgs .images .value {
+        margin-top: 74%;
+    }
     .third .imgs {
         flex-wrap: wrap;
         gap: 10px;
-        height: 300vh;
+        height: 265vh;
         display: flex;
         flex-direction: row;
     }
@@ -1248,6 +1252,6 @@ footer {
         height: 12vh;
     }
     .third {
-        height: 650vh;
+        height: 600vh;
     }
 }
