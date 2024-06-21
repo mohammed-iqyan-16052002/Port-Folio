@@ -45,49 +45,6 @@
 }
 
 
-/* .container .navbar {
-    width: 100%;
-    padding: 0px 20px;
-    height: 10vh;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-    font-family: "Roboto Slab", serif;
-    box-shadow: 5px 5px 5px var(--navy-shadow);
-}
-
-.container .navbar ul {
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly;
-
-}
-
-.container .navbar ul li {
-    color: var(--lightest-slate);
-    border-bottom: 2px solid gold;
-}
-
-.container .navbar ul li:hover {
-    color: gold;
-    transition: 0.5s ease-in-out;
-}
-.menu-toggle {
-    display: none;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 30px;
-    height: 20px;
-    cursor: pointer;
-}
-
-.bar {
-    width: 100%;
-    height: 3px;
-    background-color: var(--lightest-slate);
-    transition: 0.3s ease-in-out;
-} */
-
 :root {
     --navy-shadow: rgba(0, 0, 0, 0.2);
     --lightest-slate: #ccd6f6;
@@ -111,6 +68,7 @@
 }
 
 .navbar ul li {
+    font-family: "Roboto Slab", serif;
     list-style: none;
     color: var(--lightest-slate);
     border-bottom: 2px solid gold;
@@ -714,10 +672,54 @@ textarea {
     color: black;
 }
 
+
 footer {
-    width: 100%;
-    height: 40vh;
     background-image: linear-gradient(to right bottom, #232023, #211d21, #1f1b1f, #1c181e, #1a161c);
+    color: var(--gray-color);
+    font-family: "Roboto Slab", serif;
+    font-weight: bold;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    margin: 10px 0;
+}
+
+.footer-section h4 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: var(--gray-color);
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    text-decoration: underline;
+}
+
+@media (min-width: 768px) {
+    .footer-container {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-section {
+        margin: 0 20px;
+    }
 }
 
 
@@ -736,6 +738,34 @@ footer {
         width: 22%;
         height: 35vh;
     }
+    .contact {
+        height: 120vh;
+        width: 100%;
+        background-image: linear-gradient(to right bottom, #232023, #211d21, #1f1b1f, #1c181e, #1a161c);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .contact .social {
+        width: 70%;
+        height: 95vh;
+    }
+
+    .contact .social .link,
+    .contact .social .links .box {
+        width: 90%;
+    }
+
+    .social a {
+        width: 12%;
+    }
+
+    .social .icon a {
+        width: 20%;
+    }
+
 }
 
 @media (max-width: 992px) {
@@ -747,17 +777,32 @@ footer {
         width: 30%;
         height: 30vh;
     }
+
+    .contact .social {
+        width: 80%;
+    }
+
+    .social a {
+        width: 10%;
+    }
+
+    .social .icon {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .social .icon a {
+        margin-bottom: 10px;
+        width: 20%;
+    }
 }
-
-
-
 
 @media screen and (max-width: 768px) {
     .container .navbar ul {
         width: 70%;
         justify-content: space-around;
     }
-    
+
     .container .navbar .p {
         width: 15%;
         height: 15vh;
@@ -923,11 +968,78 @@ footer {
         justify-content: space-evenly;
     }
 
+
+    .contact {
+        height: 265vh;
+       
+    }
+
+    #form {
+        background-color: #000000;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        height: 95vh;
+        max-width: 90%;
+    }
+
+    .contact .con {
+        flex-direction: column;
+        height: 250vh;
+    }
+
+    .contact .social {
+        width: 90%;
+        height: 145vh;
+    }
+
+    .contact .social .link {
+        height: 50vh;
+    }
+
+    .contact .social .links {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contact .social .links .box {
+        width: 80%;
+        height: 35vh;
+        margin-bottom: 20px;
+    }
+    .contact .social .links .box a {
+        width: 13%;
+        height: 11vh;
+        font-size: 18px;
+    }
+    .contact .social .links .box p {
+        font-size: 25px;
+        font-family: "Roboto Slab", serif;
+        font-weight: bold;
+        color: var(--bg-dark-blue);
+    }
+
+    .contact .social .links .box h4 {
+        font-size: 20px;
+        font-family: "Roboto Slab", serif;
+        font-weight: bold;
+        color: var(--bg-dark-blue);
+    }
+
+    .social a {
+        width: 10%;
+        height: 9vh;
+        font-size: 16px;
+    }
+    .contact .social .link p {
+        font-size: 26px;
+        font-family: "Roboto Slab", serif;
+        font-weight: bold;
+        color: var(--bg-dark-blue);
+        letter-spacing: 3px;
+    }
+
 }
-
-
-
-
 
 @media (max-width: 576px) {
     .third p {
@@ -957,8 +1069,48 @@ footer {
         gap: 10px;
         height: 300vh;
         display: flex;
-        /* background: rgb(240, 240, 7); */
         flex-direction: row;
+    }
+
+    
+    .contact {
+        height: 260vh;
+    }
+    .contact .con {
+        flex-direction: column;
+        height: 245vh;
+  
+    }
+    .contact .social {
+        width: 90%;
+        height: 140vh;
+    }
+
+    .contact .social .link {
+        height: 40vh;
+    }
+    .contact .social .links .box a {
+        width: 12%;
+        height: 9vh;
+        font-size: 18px;
+    }
+
+    .contact .social .link p, .contact .social .links .box p, .contact .social .links .box h4 {
+        font-size: 23px;
+    }
+    .social a {
+        width: 11%;
+        height: 9vh;
+        font-size: 14px;
+    }
+
+    .social .icon {
+        flex-direction: row;
+    }
+
+    .social .icon a {
+        margin-bottom: 10px;
+        width: 20%;
     }
 
 }
@@ -974,6 +1126,7 @@ footer {
         width: 20%;
         height: 15vh;
     }
+
     .cont h1 {
         font-size: 40px;
     }
@@ -1118,35 +1271,41 @@ footer {
         margin-left: 10%;
         overflow-x: hidden;
     }
+
     .third .imgs .images .value {
         margin-top: 73%;
     }
+
     .third .imgs .images {
         width: 90%;
         height: 70vh;
     }
+
     .third p {
         width: 90%;
         font-size: 14px;
     }
 }
-@media  (max-width:400px) {
+
+@media (max-width:400px) {
     .container .navbar .p {
         width: 25%;
         height: 15vh;
     }
-    
+
     .container .content .text {
         width: 90%;
         height: 50vh;
         text-align: center;
     }
+
     .container .content .img {
         height: 50vh;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .container .content {
         width: 100%;
         height: 100vh;
@@ -1156,11 +1315,13 @@ footer {
         align-items: center;
         flex-direction: column-reverse;
     }
+
     .container .content .img img {
         width: 75%;
         height: 45vh;
         border-radius: 50%;
     }
+
     .container {
         width: 100%;
         height: 115vh;
@@ -1168,6 +1329,7 @@ footer {
         background-size: cover;
         background-repeat: no-repeat;
     }
+
     .cont {
         width: 100%;
         height: 115vh;
@@ -1186,6 +1348,7 @@ footer {
         width: 100%;
         height: 85vh;
     }
+
     .about .myimg {
         width: 90%;
         height: 90vh;
@@ -1194,6 +1357,7 @@ footer {
         flex-direction: column;
         justify-content: space-evenly;
     }
+
     .about {
         width: 100%;
         height: 180vh;
@@ -1203,6 +1367,7 @@ footer {
         background-image: linear-gradient(to right bottom, #232023, #211d21, #1f1b1f, #1c181e, #1a161c);
         flex-direction: column;
     }
+
     .about .myimg .skills {
         width: 90%;
         height: 6vh;
@@ -1212,16 +1377,20 @@ footer {
         align-items: center;
         border-radius: 50px;
     }
+
     .about .myimg .para {
         font-size: 12px;
     }
+
     .val p {
         font-size: 13px;
     }
+
     .val {
         width: 90%;
         height: 10vh;
     }
+
     .about .myimg .main {
         height: 40vh;
     }
@@ -1234,13 +1403,17 @@ footer {
         font-family: "Roboto Slab", serif;
         text-decoration: underline;
     }
+
     .third .imgs .images {
         width: 90%;
         height: 62vh;
     }
+
     .third .imgs .images .value {
-        margin-top: 90%;
+        margin-top: 100%;
     }
+    
+
     .third .imgs {
         flex-wrap: wrap;
         gap: 10px;
@@ -1248,10 +1421,69 @@ footer {
         display: flex;
         flex-direction: row;
     }
+
     .third .imgs .images .value .button {
         height: 12vh;
     }
+    .about .myimg img {
+        width: 100%;
+        height: 80vh;
+    }
+
     .third {
-        height: 600vh;
+        height: 575vh;
+    }
+
+    #form {
+       
+        height: 75vh;
+    }
+    .contact .con {
+        flex-direction: column;
+        height: 180vh;
+
+    }
+    .contact .social .links .box h4 {
+        font-size: 17px !important;
+
+    }
+    .social .icon {
+        width: 90%;
+        flex-direction: row;
+    }
+    .social a {
+        width: 18%;
+        height: 8vh;
+        font-size: 17px;
+    }
+    .contact .social .link {
+        height: 35vh;
+    }
+    .contact .social .links .box {
+        width: 90%;
+        height: 25vh;
+        margin-bottom: 20px;
+    }
+    .contact .social .links .box a {
+        width: 18%;
+        height: 8vh;
+        font-size: 18px;
+    } 
+    .contact .social {
+        width: 90%;
+        height: 100vh;
+    }
+    .contact {
+        height: 190vh;
+    }
+
+    footer {
+        height: 70vh;
+        background-image: linear-gradient(to right bottom, #232023, #211d21, #1f1b1f, #1c181e, #1a161c);
+        color: var(--gray-color);
+        font-family: "Roboto Slab", serif;
+        font-weight: bold;
+        padding: 30px 0;
+        text-align: center;
     }
 }
