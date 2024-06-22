@@ -146,17 +146,7 @@ btn3.addEventListener('click', () => {
 
 })
 
-document.getElementById('downloadBtn').addEventListener('click', function() {
-    const fileContent = 'This is the content of the file that you want to download.';
-    const blob = new Blob([fileContent], { type: 'text/plain' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'c:\Users\lenovo\Downloads\Resume_Mohammed Iqyan.pdf'; 
-    link.style.display = 'none';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
+
   
 
 
