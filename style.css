@@ -31,6 +31,7 @@
     --text-gray: white;
     --text-white: #fff;
     list-style: none;
+    text-decoration: none;
 
 }
 
@@ -165,6 +166,13 @@
     color: var(--lightest-slate);
     border: 2px solid var(--lightest-slate);
     background: transparent;
+}
+
+.text button a{
+    color: var(--lightest-slate);
+}
+.text button a:hover{
+    color: black;
 }
 
 .text button:hover {
@@ -725,18 +733,18 @@ footer {
 
 @media (max-width: 1200px) {
     .third {
-        height: 345vh;
+        height: 150vh;
     }
 
     .third .imgs {
         flex-wrap: wrap;
         gap: 10px;
-        height: auto;
+        height: 41vh;
     }
 
     .third .imgs .images {
         width: 22%;
-        height: 35vh;
+        height: 41vh;
     }
     .contact {
         height: 120vh;
@@ -749,15 +757,40 @@ footer {
     }
 
     .contact .social {
-        width: 70%;
+        width: 45%;
         height: 95vh;
     }
 
-    .contact .social .link,
-    .contact .social .links .box {
-        width: 90%;
+    .contact .social .link{
+        width: 80%;
     }
-
+    .contact .social .links .box {
+        width: 45%;
+    }
+    .contact .social .links .box h4 {
+        font-size: 13px;
+        font-family: "Roboto Slab", serif;
+        font-weight: bold;
+        color: var(--bg-dark-blue);
+    }
+    .about .myimg .skills button {
+        padding: 12px 20px;
+        border-radius: 50px;
+        background-color: var(--lightest-navy);
+        color: var(--white);
+        border: none;
+        font-size: 13px;
+        font-weight: 300;
+        cursor: pointer;
+    }
+   
+    #form {
+        background-color: #000000;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 45%;
+        max-width: 100%;
+    }
     .social a {
         width: 12%;
     }
@@ -769,13 +802,21 @@ footer {
 }
 
 @media (max-width: 992px) {
+    .third {
+        height: 270vh;
+    }
+    .third .imgs {
+        flex-wrap: wrap;
+        gap: 10px;
+        height: 110vh;
+    }
     .third p {
         width: 80%;
     }
 
     .third .imgs .images {
         width: 30%;
-        height: 30vh;
+        height: 51vh;
     }
 
     .contact .social {
@@ -929,6 +970,9 @@ footer {
         height: 50vh;
         margin-left: 10%;
         overflow-x: hidden;
+    }
+    .third {
+        height: 340vh;
     }
 
     .third .imgs .images .value {
@@ -1360,7 +1404,7 @@ footer {
 
     .about {
         width: 100%;
-        height: 180vh;
+        height: 150vh;
         display: flex;
         align-items: center;
         justify-content: space-evenly;
@@ -1406,11 +1450,13 @@ footer {
 
     .third .imgs .images {
         width: 90%;
-        height: 62vh;
+        height: 53vh;
     }
-
+      #my{
+        height: 60vh;
+     }
     .third .imgs .images .value {
-        margin-top: 67%;
+        margin-top: 90%;
         display: flex;
         height: 30vh;
         justify-content: space-evenly;
@@ -1429,7 +1475,7 @@ footer {
     }
     .about .myimg img {
         width: 100%;
-        height: 80vh;
+        height: 60vh;
     }
 
     .third {
@@ -1459,6 +1505,7 @@ footer {
         font-size: 17px;
     }
     .contact .social .link {
+        width: 90%;
         height: 35vh;
     }
     .contact .social .links .box {
